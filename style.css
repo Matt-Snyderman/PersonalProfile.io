@@ -1,145 +1,197 @@
+/* Added so the transition is not jarring */
 html {
     scroll-behavior: smooth;
-}
+} 
 
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     color: #333;
-}
-
-/* Header */
-header {
-    background: #0077cc;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #D35400; /* Orange for headings */
+  }
+  
+  h1 {
+    color: white; /* White for the h1 tag */
+  }
+  
+  a {
+    color: blue; /* Blue for links */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #003d80; /* Darker blue on hover */
+  }
+  
+  /* Header */
+  header {
+    background-color: #D35400;
     color: white;
-    padding: 20px 0;
     text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-/* Navigation */
-nav {
-    background: #005fa3;
-}
-
-nav ul {
+    padding: 2rem 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #333;
+    padding: 1rem 0;
+  }
+  
+  nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-}
-
-nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
     margin: 0 15px;
-}
-
-nav a {
+  }
+  
+  nav ul li a {
+    color: white; /* White for nav links */
+    font-size: 1.1rem;
+    padding: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    border: 2px solid white;
+    padding: 3px;
     color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background: #004080;
-    border-radius: 5px;
-}
-
-/* Sections */
-section {
-    padding: 20px;
+  }
+  
+  /* Section Styles */
+  section {
+    max-width: 1200px;
     margin: 20px auto;
-    max-width: 800px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-section h2 {
-    color: #0077cc;
-    border-bottom: 2px solid #0077cc;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-section p, section ul {
-    margin-bottom: 15px;
-}
-
-/* Skills List */
-section#skills ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-/* Publications Links */
-section#publications a {
-    color: #0077cc;
-}
-
-section#publications a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Section */
-#contact p {
-    font-weight: bold;
-}
-
-/* Table Styles */
-table {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #about p {
+    font-size: 1.1rem;
+  }
+  
+  /* Skills Table */
+  table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th, td {
-    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  table thead {
+    background-color: #D35400;
+    color: white;
+  }
+  
+  table th, table td {
     padding: 10px;
     text-align: left;
-}
-
-th {
-    background-color: #0077cc;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
-    background-color: #e9e9e9;
-}
-.education-item {
-  display: inline-block;
-  width: 45%; /* Adjust width as needed */
-  margin: 10px;
-  vertical-align: top;
-  background: #f9f9f9; /* Light background for contrast */
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.education-item p {
-  margin-bottom: 5px;
-}
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Project Section */
+  .project-item {
+    margin-bottom: 20px;
+  }
+  
+  .project-item h1 {
+    font-size: 1.5rem;
+    color: #D35400;
+  }
+  
+  .project-item p {
+    font-size: 1rem;
+  }
+  
+  /* Experience Section */
+  .experience-item {
+    margin-bottom: 20px;
+  }
+  
+  .experience-item h3 {
+    color: #D35400;
+  }
+  
+  .experience-item h4 {
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .experience-item ul {
+    margin-top: 10px;
+  }
+  
+  .experience-item ul li {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  /* Education Section */
+  .education-item p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .education-item strong {
+    color: #D35400;
+  }
+  
+  /* Publications Section */
+  #publications ul {
+    padding-left: 20px;
+  }
+  
+  #publications li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Section */
+  #contact p {
+    font-size: 1.1rem;
+  }
+  
+  #contact a {
+    color: blue; /* Blue for contact links */
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul li {
+      margin-bottom: 10px;
+    }
+  
+    section {
+      padding: 15px;
+    }
+  }
+  
